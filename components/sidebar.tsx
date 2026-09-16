@@ -15,7 +15,7 @@ const items = [
 export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   const pathname = usePathname();
   const router = useRouter();
-  const { applications, profile, user, logout } = useStore();
+  const { profile, user, logout } = useStore();
   const name=profile?.full_name||user?.user_metadata?.full_name||user?.email?.split("@")[0]||"User";
   const initials=name.split(" ").map((x:string)=>x[0]).join("").slice(0,2).toUpperCase();
   return (
@@ -38,7 +38,6 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
               return (
               <a key={label} href={href} onClick={onClose} className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition ${active ? "bg-white/10 text-white" : "text-white/55 hover:bg-white/5 hover:text-white"}`}>
                 <Icon size={19} strokeWidth={active ? 2.2 : 1.8} />{label}
-                {label === "My Applications" && <span className="ml-auto rounded-full bg-white/10 px-2 py-0.5 text-[10px]">{applications.length}</span>}
               </a>
             )})}
           </div>
