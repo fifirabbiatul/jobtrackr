@@ -24,7 +24,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
       <aside className={`fixed inset-y-0 left-0 z-40 flex w-[264px] flex-col bg-navy text-white transition-transform lg:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="flex h-20 items-center justify-between px-6">
           <a href="/dashboard" className="flex items-center gap-3" aria-label="JobTrackr home">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-teal font-bold shadow-lg shadow-teal/20">J</span>
+            <img src="/jobtrackr-logo.png" alt="JobTrackr logo" className="h-9 w-9 rounded-xl object-cover shadow-lg shadow-teal/20" />
             <span className="text-xl font-bold tracking-tight">JobTrackr</span>
           </a>
           <button className="rounded-lg p-2 text-white/60 hover:bg-white/10 lg:hidden" onClick={onClose}><X size={20} /></button>
