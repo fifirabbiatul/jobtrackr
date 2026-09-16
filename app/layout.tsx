@@ -5,7 +5,7 @@ import { StoreProvider } from "@/lib/store";
 export const metadata: Metadata = {
   title: "JobTrackr — Your career, in motion",
   description: "Track one meaningful job application every day.",
-  icons: { icon: "/jobtrackr-logo.jpeg", apple: "/jobtrackr-logo.jpeg" },
+  icons: { icon: "/jobtrackr-logo.png", apple: "/jobtrackr-logo.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
