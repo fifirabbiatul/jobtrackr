@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, Building2, CircleHelp, LayoutDashboard, PanelLeftClose, Plus, Settings, X } from "lucide-react";
+import { BarChart3, Building2, LayoutDashboard, PanelLeftClose, Plus, Settings, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { useStore } from "@/lib/store";
@@ -43,7 +43,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
             )})}
           </div>
           <p className="mb-3 mt-9 px-3 text-[10px] font-bold uppercase tracking-[.18em] text-white/35">Support</p>
-          {[{ label: "Settings", icon: Settings, href: "/settings" }, { label: "Help Center", icon: CircleHelp, href: "/help" }].map(({ label, icon: Icon, href }) => (
+          {[{ label: "Settings", icon: Settings, href: "/settings" }].map(({ label, icon: Icon, href }) => (
             <a key={label} href={href} onClick={onClose} className={`flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium transition ${pathname === href ? "bg-white/10 text-white" : "text-white/55 hover:bg-white/5 hover:text-white"}`}><Icon size={19} strokeWidth={1.8} />{label}</a>
           ))}
         </nav>
